@@ -614,3 +614,21 @@ nav.nav a.nav-logo img,
   text-decoration: none !important;
   line-height: 1 !important;
 }
+
+/* ── HERO LOGO BLEND ── */
+/* Ensure hero content sits above the ::before overlay */
+.hero .hero-inner,
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+/* Logo image blends with the circuit background directly */
+.hero .hero-inner img {
+  mix-blend-mode: screen;
+  position: relative;
+  z-index: 3;
+}
+/* Remove any background from the hero-inner that would block blending */
+.hero-inner {
+  background: transparent !important;
+}
