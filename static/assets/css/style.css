@@ -585,3 +585,22 @@ nav.nav a.nav-logo img,
   mix-blend-mode: screen !important;
   display: block !important;
 }
+
+/* ── LOGO BLEND FIX ── */
+.hero-logo-wrap {
+  isolation: auto !important;
+  background: transparent !important;
+}
+.hero-logo-wrap img {
+  mix-blend-mode: screen !important;
+  display: block !important;
+}
+/* Nav logo text fallback styling */
+.nav-logo-text {
+  font-size: 22px;
+  font-weight: 800;
+  color: #F0EEE9;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+.nav-logo-text span { color: #C5A059; }
