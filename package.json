@@ -1,0 +1,12 @@
+{
+  "name": "stza-website",
+  "version": "1.0.0",
+  "description": "Sports Tech Africa Limited website",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

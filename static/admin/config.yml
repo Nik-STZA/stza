@@ -1,0 +1,125 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/assets/images"
+public_folder: "/assets/images"
+
+publish_mode: editorial_workflow
+
+collections:
+
+  # ── SITE SETTINGS ──────────────────────────────
+  - name: "settings"
+    label: "Site settings"
+    files:
+      - name: "site"
+        label: "Global settings"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Site name", name: "site_name", widget: "string" }
+          - { label: "Site description (tagline)", name: "site_description", widget: "string" }
+          - { label: "Entity name", name: "entity_name", widget: "string" }
+          - { label: "Companies House number", name: "companies_house", widget: "string" }
+          - { label: "ICO number", name: "ico_number", widget: "string" }
+          - { label: "Hello email", name: "email_hello", widget: "string" }
+          - { label: "Privacy email", name: "email_privacy", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin_url", widget: "string" }
+          - { label: "AfricanSTN URL", name: "africanstn_url", widget: "string" }
+          - { label: "Copyright year", name: "copyright_year", widget: "string" }
+
+  # ── PAGE CONTENT ───────────────────────────────
+  - name: "content"
+    label: "Page content"
+    files:
+      - name: "main"
+        label: "All page content"
+        file: "src/_data/content.json"
+        fields:
+
+          - label: "Hero section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Line 1", name: "hero_line1", widget: "string" }
+              - { label: "Line 2", name: "hero_line2", widget: "string" }
+              - { label: "Line 3 (gold)", name: "hero_line3", widget: "string" }
+              - { label: "Body text", name: "hero_body", widget: "text" }
+              - { label: "Primary button", name: "hero_cta_primary", widget: "string" }
+              - { label: "Secondary button", name: "hero_cta_secondary", widget: "string" }
+
+          - label: "About section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "about_heading", widget: "string" }
+              - { label: "Paragraph 1", name: "about_para1", widget: "text" }
+              - { label: "Paragraph 2", name: "about_para2", widget: "text" }
+              - { label: "Paragraph 3", name: "about_para3", widget: "text" }
+
+          - label: "Services section"
+            name: "services"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "services_heading", widget: "string" }
+              - { label: "Intro text", name: "services_intro", widget: "text" }
+              - { label: "Service 1 title", name: "service1_title", widget: "string" }
+              - { label: "Service 1 items (pipe separated)", name: "service1_items", widget: "text", hint: "Separate items with |" }
+              - { label: "Service 2 title", name: "service2_title", widget: "string" }
+              - { label: "Service 2 items (pipe separated)", name: "service2_items", widget: "text" }
+              - { label: "Service 3 title", name: "service3_title", widget: "string" }
+              - { label: "Service 3 items (pipe separated)", name: "service3_items", widget: "text" }
+              - { label: "Service 4 title", name: "service4_title", widget: "string" }
+              - { label: "Service 4 items (pipe separated)", name: "service4_items", widget: "text" }
+              - { label: "Service 5 title", name: "service5_title", widget: "string" }
+              - { label: "Service 5 items (pipe separated)", name: "service5_items", widget: "text" }
+              - { label: "Service 6 title", name: "service6_title", widget: "string" }
+              - { label: "Service 6 items (pipe separated)", name: "service6_items", widget: "text" }
+
+          - label: "Approach section"
+            name: "approach"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "approach_heading", widget: "string" }
+              - { label: "Intro text", name: "approach_intro", widget: "text" }
+              - { label: "Pillar 1 title", name: "pillar1_title", widget: "string" }
+              - { label: "Pillar 1 body", name: "pillar1_body", widget: "text" }
+              - { label: "Pillar 2 title", name: "pillar2_title", widget: "string" }
+              - { label: "Pillar 2 body", name: "pillar2_body", widget: "text" }
+              - { label: "Pillar 3 title", name: "pillar3_title", widget: "string" }
+              - { label: "Pillar 3 body", name: "pillar3_body", widget: "text" }
+              - { label: "Pillar 4 title", name: "pillar4_title", widget: "string" }
+              - { label: "Pillar 4 body", name: "pillar4_body", widget: "text" }
+              - { label: "Pillar 5 title", name: "pillar5_title", widget: "string" }
+              - { label: "Pillar 5 body", name: "pillar5_body", widget: "text" }
+
+          - label: "Leadership section"
+            name: "leadership"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "leadership_heading", widget: "string" }
+              - { label: "Name", name: "leader_name", widget: "string" }
+              - { label: "Title", name: "leader_title", widget: "string" }
+              - { label: "Bio paragraph 1", name: "leader_bio1", widget: "text" }
+              - { label: "Bio paragraph 2", name: "leader_bio2", widget: "text" }
+              - { label: "Bio paragraph 3", name: "leader_bio3", widget: "text" }
+
+          - label: "AfricanSTN band"
+            name: "africanstn_band"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "africanstn_heading", widget: "string" }
+              - { label: "Body", name: "africanstn_body", widget: "text" }
+              - { label: "Card 1 title", name: "africanstn_card1_title", widget: "string" }
+              - { label: "Card 1 body", name: "africanstn_card1_body", widget: "text" }
+              - { label: "Card 2 title", name: "africanstn_card2_title", widget: "string" }
+              - { label: "Card 2 body", name: "africanstn_card2_body", widget: "text" }
+              - { label: "Card 3 title", name: "africanstn_card3_title", widget: "string" }
+              - { label: "Card 3 body", name: "africanstn_card3_body", widget: "text" }
+
+          - label: "Contact section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "contact_heading", widget: "string" }
+              - { label: "Body", name: "contact_body", widget: "text" }

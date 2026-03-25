@@ -1,0 +1,223 @@
+---
+layout: base.njk
+pageTitle: STZA
+---
+
+<!-- HERO -->
+<section class="hero circuit-bg" id="hero" aria-labelledby="hero-title" style="position:relative;">
+  <div class="container">
+    <div class="hero-inner">
+      <h1 class="hero-title" id="hero-title">
+        {{ content.hero_line1 }}<br>
+        {{ content.hero_line2 }}<br>
+        <span>{{ content.hero_line3 }}</span>
+      </h1>
+      <p class="hero-body">{{ content.hero_body }}</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-primary">{{ content.hero_cta_primary }}</a>
+        <a href="#contact" class="btn btn-outline">{{ content.hero_cta_secondary }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section--white" id="about" aria-labelledby="about-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <span class="eyebrow">{{ content.about_eyebrow }}</span>
+      <h2 class="section-title" id="about-title">{{ content.about_heading }}</h2>
+      <div class="section-divider section-divider--center"></div>
+    </div>
+    <div class="reveal" style="max-width:760px;margin:0 auto;text-align:center;">
+      <p style="font-size:16px;color:var(--text-secondary);line-height:1.9;margin-bottom:18px;">{{ content.about_para1 }}</p>
+      <p style="font-size:16px;color:var(--text-secondary);line-height:1.9;margin-bottom:18px;">{{ content.about_para2 }}</p>
+      <p style="font-size:16px;color:var(--text-secondary);line-height:1.9;">{{ content.about_para3 }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section--warm" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <span class="eyebrow">{{ content.services_eyebrow }}</span>
+      <h2 class="section-title" id="services-title">{{ content.services_heading }}</h2>
+      <div class="section-divider section-divider--center"></div>
+      <p class="section-lead" style="margin:0 auto;">{{ content.services_intro }}</p>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="service-card">
+        <h3>{{ content.service1_title }}</h3>
+        <ul>{% for item in content.service1_items | split("|") %}<li>{{ item }}</li>{% endfor %}</ul>
+      </div>
+      <div class="service-card">
+        <h3>{{ content.service2_title }}</h3>
+        <ul>{% for item in content.service2_items | split("|") %}<li>{{ item }}</li>{% endfor %}</ul>
+      </div>
+      <div class="service-card">
+        <h3>{{ content.service3_title }}</h3>
+        <ul>{% for item in content.service3_items | split("|") %}<li>{{ item }}</li>{% endfor %}</ul>
+      </div>
+      <div class="service-card">
+        <h3>{{ content.service4_title }}</h3>
+        <ul>{% for item in content.service4_items | split("|") %}<li>{{ item }}</li>{% endfor %}</ul>
+      </div>
+      <div class="service-card">
+        <h3>{{ content.service5_title }}</h3>
+        <ul>{% for item in content.service5_items | split("|") %}<li>{{ item }}</li>{% endfor %}</ul>
+      </div>
+      <div class="service-card">
+        <h3>{{ content.service6_title }}</h3>
+        <ul>{% for item in content.service6_items | split("|") %}<li>{{ item }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="section section--black" id="approach" aria-labelledby="approach-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <span class="eyebrow">{{ content.approach_eyebrow }}</span>
+      <h2 class="section-title section-title--white" id="approach-title">{{ content.approach_heading }}</h2>
+      <div class="section-divider section-divider--center"></div>
+      <p class="section-lead section-lead--dark" style="margin:0 auto;">{{ content.approach_intro }}</p>
+    </div>
+    <div class="grid-5 reveal">
+      <div class="pillar-card"><h3>{{ content.pillar1_title }}</h3><p>{{ content.pillar1_body }}</p></div>
+      <div class="pillar-card"><h3>{{ content.pillar2_title }}</h3><p>{{ content.pillar2_body }}</p></div>
+      <div class="pillar-card"><h3>{{ content.pillar3_title }}</h3><p>{{ content.pillar3_body }}</p></div>
+      <div class="pillar-card"><h3>{{ content.pillar4_title }}</h3><p>{{ content.pillar4_body }}</p></div>
+      <div class="pillar-card"><h3>{{ content.pillar5_title }}</h3><p>{{ content.pillar5_body }}</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="section section--white" id="leadership" aria-labelledby="leadership-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <span class="eyebrow">{{ content.leadership_eyebrow }}</span>
+      <h2 class="section-title" id="leadership-title">{{ content.leadership_heading }}</h2>
+      <div class="section-divider section-divider--center"></div>
+    </div>
+    <div class="leadership-card reveal">
+      <div class="leadership-info">
+        <h3 class="leadership-name">{{ content.leader_name }}</h3>
+        <div class="leadership-title">{{ content.leader_title }}</div>
+        <p>{{ content.leader_bio1 }}</p>
+        <p>{{ content.leader_bio2 }}</p>
+        <p>{{ content.leader_bio3 }}</p>
+        <a href="{{ site.linkedin_url }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="linkedin-link"
+           aria-label="{{ content.leader_name }} on LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AFRICANSTN BAND -->
+<section style="background:var(--surface-dark);border-top:1px solid rgba(197,160,89,0.25);border-bottom:1px solid rgba(197,160,89,0.25);padding:48px 5%;position:relative;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;" class="reveal">
+      <div>
+        <span class="eyebrow">{{ content.africanstn_eyebrow }}</span>
+        <h2 style="font-size:clamp(20px,2.5vw,28px);font-weight:700;color:var(--text-on-dark);margin-bottom:14px;line-height:1.25;">{{ content.africanstn_heading }}</h2>
+        <p style="font-size:15px;color:var(--text-dim-dark);line-height:1.8;margin-bottom:24px;">{{ content.africanstn_body }}</p>
+        <a href="{{ site.africanstn_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold" style="font-size:13px;">Visit africanstn.com →</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="padding:18px 22px;background:rgba(197,160,89,0.07);border-radius:8px;border-left:3px solid var(--gold);">
+          <div style="font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">{{ content.africanstn_card1_title }}</div>
+          <p style="font-size:13px;color:var(--text-dim-dark);margin:0;line-height:1.6;">{{ content.africanstn_card1_body }}</p>
+        </div>
+        <div style="padding:18px 22px;background:rgba(197,160,89,0.07);border-radius:8px;border-left:3px solid var(--gold);">
+          <div style="font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">{{ content.africanstn_card2_title }}</div>
+          <p style="font-size:13px;color:var(--text-dim-dark);margin:0;line-height:1.6;">{{ content.africanstn_card2_body }}</p>
+        </div>
+        <div style="padding:18px 22px;background:rgba(197,160,89,0.07);border-radius:8px;border-left:3px solid var(--gold);">
+          <div style="font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">{{ content.africanstn_card3_title }}</div>
+          <p style="font-size:13px;color:var(--text-dim-dark);margin:0;line-height:1.6;">{{ content.africanstn_card3_body }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section--black" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="grid-2 reveal" style="gap:60px;align-items:start;">
+      <div>
+        <h2 class="section-title section-title--white" id="contact-title" style="font-size:clamp(28px,4vw,48px);">{{ content.contact_heading }}</h2>
+        <p style="font-size:16px;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:32px;">{{ content.contact_body }}</p>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="contact-detail-label">Email</div><div class="contact-detail-value"><a href="mailto:{{ site.email_hello }}">{{ site.email_hello }}</a></div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <div><div class="contact-detail-label">LinkedIn</div><div class="contact-detail-value"><a href="{{ site.linkedin_url }}" target="_blank" rel="noopener noreferrer">Sports Tech Africa (STZA)</a></div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <div><div class="contact-detail-label">African Sports Technology Network</div><div class="contact-detail-value"><a href="{{ site.africanstn_url }}" target="_blank" rel="noopener noreferrer">africanstn.com</a></div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg></div>
+          <div>
+            <div class="contact-detail-label">Registered entity</div>
+            <div class="contact-detail-value">
+              {{ site.entity_name }}<br>
+              <span style="font-size:12px;color:rgba(255,255,255,0.4);">Companies House No. {{ site.companies_house }} · ICO No. {{ site.ico_number }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="contact-form-card">
+          <h3>Send a message</h3>
+          <form name="stza-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="stza-contact">
+            <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+            <div class="form-group">
+              <label for="name">Name <span class="required">(required)</span></label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email <span class="required">(required)</span></label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="organisation">Organisation</label>
+              <input type="text" id="organisation" name="organisation" placeholder="Company or organisation name">
+            </div>
+            <div class="form-group">
+              <label for="enquiry">Enquiry type</label>
+              <select id="enquiry" name="enquiry">
+                <option value="">Select an area</option>
+                <option value="fractional-fd">Fractional Finance Director</option>
+                <option value="financial-advisory">Financial advisory & strategy</option>
+                <option value="investment-readiness">Investment readiness</option>
+                <option value="africanstn">African Sports Technology Network</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about your organisation and what you are looking for..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send message</button>
+            <p style="font-size:12px;color:rgba(255,255,255,0.35);text-align:center;margin-top:12px;">Your details are used solely to respond to your enquiry. See our <a href="/privacy/" style="color:rgba(255,255,255,0.5);">privacy policy</a>.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
