@@ -653,3 +653,13 @@ nav.nav a.nav-logo img,
   mix-blend-mode: screen !important;
   isolation: auto !important;
 }
+
+/* ── NAV LOGO FINAL ── */
+nav.nav a.nav-logo img {
+  height: 40px !important;
+  width: 160px !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  display: block !important;
+  mix-blend-mode: normal !important;
+}
