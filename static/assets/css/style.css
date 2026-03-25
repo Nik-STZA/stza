@@ -450,7 +450,7 @@ li{margin-bottom:.45em;color:var(--text-secondary);font-size:14px;line-height:1.
 .circuit-bg {
   background-color: #0F1113;
   background-image:
-    url("../assets/images/circuit-hero.jpg"),
+    url("../images/circuit-hero.jpg"),
     url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(197,160,89,0.18)' stroke-width='1' stroke-linecap='round'%3E%3Cline x1='50' y1='0' x2='50' y2='18'/%3E%3Cline x1='50' y1='36' x2='50' y2='64'/%3E%3Cline x1='50' y1='82' x2='50' y2='100'/%3E%3Cline x1='0' y1='50' x2='18' y2='50'/%3E%3Cline x1='36' y1='50' x2='64' y2='50'/%3E%3Cline x1='82' y1='50' x2='100' y2='50'/%3E%3C/g%3E%3C/svg%3E");
   background-size: cover, 100px 100px;
   background-position: center, center;
@@ -568,4 +568,20 @@ nav.nav a.nav-logo img,
 /* AfricanSTN band responsive */
 @media (max-width: 720px) {
   .africanstn-band-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── STZA FIXES ── */
+.circuit-bg, .circuit-bg--subtle {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Nav logo - bigger with mix-blend-mode */
+.nav-logo img {
+  height: 52px !important;
+  width: 200px !important;
+  object-fit: cover !important;
+  object-position: 20% center !important;
+  mix-blend-mode: screen !important;
+  display: block !important;
 }
