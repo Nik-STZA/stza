@@ -632,3 +632,24 @@ nav.nav a.nav-logo img,
 .hero-inner {
   background: transparent !important;
 }
+
+/* ── HERO LOGO BLEND FINAL FIX ──
+   The ::before overlay creates a stacking context blocking mix-blend-mode.
+   Remove it from hero specifically and use a gradient in the bg stack instead. */
+.hero.circuit-bg::before {
+  display: none !important;
+}
+.hero.circuit-bg {
+  background-image:
+    linear-gradient(rgba(10,11,12,0.62), rgba(10,11,12,0.62)),
+    url("../images/circuit-hero.jpg"),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(197,160,89,0.18)' stroke-width='1'%3E%3Cline x1='50' y1='0' x2='50' y2='18'/%3E%3Cline x1='50' y1='36' x2='50' y2='64'/%3E%3Cline x1='82' y1='50' x2='100' y2='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: auto, cover, 100px 100px;
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+/* Logo now blends directly with background - no stacking context in the way */
+.hero .hero-inner img[alt="STZA"] {
+  mix-blend-mode: screen !important;
+  isolation: auto !important;
+}
