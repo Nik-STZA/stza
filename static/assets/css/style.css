@@ -604,3 +604,13 @@ nav.nav a.nav-logo img,
   text-decoration: none;
 }
 .nav-logo-text span { color: #C5A059; }
+
+/* Nav STZA text mark sizing */
+.nav-logo.nav-logo-text {
+  font-size: 24px !important;
+  font-weight: 900 !important;
+  color: #F0EEE9 !important;
+  letter-spacing: -0.5px !important;
+  text-decoration: none !important;
+  line-height: 1 !important;
+}
