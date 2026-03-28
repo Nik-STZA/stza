@@ -179,16 +179,26 @@ permalink: /privacy/
 
       <p>You may request deletion of your information at any time. Please refer to Section 12 for how to exercise this right.</p>
 
-      <h2>11. Cookies and tracking technologies</h2>
+      <h2 id="cookies">11. Cookies and tracking technologies</h2>
       <p>Cookies are small text files placed on your device when you visit a website. Our websites (stza.io and africanstn.com) are hosted on Netlify, which may set cookies on your device as part of its hosting infrastructure. We use the following categories of cookies:</p>
       <ul>
         <li><strong>Strictly necessary cookies</strong> — essential for the website to function (session management, security, form submission). These cannot be disabled and do not require consent. Duration: session or as required.</li>
-        <li><strong>Performance and analytics cookies</strong> — collect aggregated, anonymous information about how visitors use our websites. Duration: up to 12 months. These require your consent.</li>
-        <li><strong>Functionality cookies</strong> — remember your settings and preferences (including your colour theme preference). Duration: session or persistent. These require your consent.</li>
+        <li><strong>Performance and analytics cookies</strong> — collect aggregated, anonymous information about how visitors use our websites. Google Analytics is used with Consent Mode v2. Analytics cookies are only activated after you explicitly grant consent via our cookie banner. Duration: up to 12 months.</li>
+        <li><strong>Functionality cookies</strong> — remember your settings and preferences (including your colour theme preference stored in localStorage). These are only activated after you explicitly grant consent via our cookie banner. If you choose "Essentials only", your theme preference will not persist between visits. Duration: session or persistent.</li>
       </ul>
       <p>We do not currently use marketing or advertising cookies. If this changes, we will update this policy and obtain your consent before deploying such cookies.</p>
+      <h3>11.1 Cookie consent banner</h3>
+      <p>A cookie consent banner is displayed on first visit to our websites. It offers two choices:</p>
+      <ul>
+        <li><strong>Accept all</strong> — enables functionality cookies (theme preference persistence in localStorage) and performance/analytics cookies (Google Analytics with Consent Mode v2 signals). Google Analytics scripts are not loaded and no analytics data is collected until this option is selected.</li>
+        <li><strong>Essentials only</strong> — blocks all non-essential localStorage usage and analytics. Google Analytics remains fully blocked. Your theme toggle still works within a single browsing session, but the choice will not persist across page loads.</li>
+      </ul>
+      <p>Your consent choice is stored in localStorage and the banner does not reappear once a selection is made. You can reset your preference at any time by clearing your browser's localStorage for this site.</p>
+      <h3>11.2 Consent Mode v2</h3>
+      <p>We implement Google Consent Mode v2, which sends consent signals to Google services. By default, all non-essential storage categories are set to "denied". When you click "Accept all", analytics_storage, functionality_storage, and personalization_storage are updated to "granted". Advertising-related categories (ad_storage, ad_user_data, ad_personalization) remain "denied" at all times as we do not use advertising cookies.</p>
+      <h3>11.3 Server-side consent audit log</h3>
+      <p>Each consent decision is logged server-side for compliance and audit purposes. The log records the consent choice, the page URL, a timestamp, the visitor's country (derived from IP geolocation), and a truncated user agent string. No personally identifiable information beyond what is strictly necessary for audit purposes is retained in this log. IP addresses are recorded only in anonymised or country-level form.</p>
       <p>You can manage cookies through your browser settings. Disabling non-essential cookies will not affect core website functionality.</p>
-      <p>A cookie consent banner will be implemented on both websites to allow you to manage your cookie preferences when the sites are fully established.</p>
 
       <h2>12. Your rights</h2>
       <h3>12.1 UK and EU data subjects (UK GDPR / EU GDPR)</h3>
