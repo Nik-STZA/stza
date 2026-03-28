@@ -1,7 +1,7 @@
 /* ============================================================
-   stza.io — script.js v2.0
+   stza.io — script.js v3.0
    Nav · Scroll reveal · Theme toggle · Form feedback
-   Cookie consent · GA gating · Consent Mode v2
+   Cookie consent · Consent Mode v2 · Server-side audit log
    ============================================================ */
 (function(){
   'use strict';
@@ -19,23 +19,7 @@
     return getConsent() === 'all';
   }
 
-  /* ── GOOGLE ANALYTICS — only loads after "Accept all" ── */
-  var GA_ID = 'G-9J41MN774R';
-  var gaLoaded = false;
-
-  function loadGA(){
-    if(!GA_ID || gaLoaded) return;
-    gaLoaded = true;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){window.dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', GA_ID);
-  }
-
+  /* ── GOOGLE ANALYTICS — always loaded in <head>; consent signals control behaviour ── */
   function updateConsentMode(granted){
     window.dataLayer = window.dataLayer || [];
     function gtag(){window.dataLayer.push(arguments);}
@@ -95,9 +79,6 @@
     var granted = choice === 'all';
     updateConsentMode(granted);
     logConsentToServer(choice);
-    if(granted){
-      loadGA();
-    }
     // Re-apply theme to respect new consent state
     applyTheme(getCurrentTheme());
   }
@@ -108,9 +89,6 @@
     showBanner();
   } else {
     updateConsentMode(existingConsent === 'all');
-    if(existingConsent === 'all'){
-      loadGA();
-    }
   }
 
   if(btnAccept){
