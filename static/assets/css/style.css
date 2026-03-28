@@ -663,3 +663,30 @@ nav.nav a.nav-logo img {
   display: block !important;
   mix-blend-mode: normal !important;
 }
+
+/* ── COOKIE CONSENT BANNER ── */
+.cookie-banner{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;z-index:9999;
+  background:var(--surface-dark);
+  border-top:2px solid var(--gold);
+  padding:20px 5%;
+  box-shadow:0 -4px 24px rgba(0,0,0,.45);
+}
+.cookie-banner[aria-hidden="false"]{display:block;}
+.cookie-banner-inner{
+  max-width:var(--max-w);margin:0 auto;
+  display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+}
+.cookie-banner-text{
+  flex:1 1 400px;font-size:13px;color:var(--text-dim-dark);line-height:1.7;margin:0;
+}
+.cookie-banner-text a{color:var(--gold);text-decoration:underline;}
+.cookie-banner-actions{
+  display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;
+}
+.cookie-btn{font-size:13px;padding:9px 20px;min-height:40px;}
+@media (max-width:720px){
+  .cookie-banner-inner{flex-direction:column;text-align:center;}
+  .cookie-banner-actions{justify-content:center;width:100%;}
+}

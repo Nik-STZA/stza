@@ -6,6 +6,20 @@
   <title>{{ pageTitle if pageTitle else site.site_name }} — {{ site.site_description }}</title>
   <meta name="description" content="{{ pageDescription if pageDescription else site.site_description }}">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Google Consent Mode v2 — defaults BEFORE gtag loads -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:        'denied',
+      ad_user_data:      'denied',
+      ad_personalization:'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'denied',
+      personalization_storage:'denied',
+      security_storage:  'granted'
+    });
+  </script>
 </head>
 <body>
 
@@ -60,6 +74,17 @@
     </div>
   </div>
 </footer>
+
+<!-- Cookie consent banner -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-hidden="true">
+  <div class="cookie-banner-inner">
+    <p class="cookie-banner-text">We use cookies to improve your experience. Essential cookies keep the site running; optional cookies help with analytics and remember your preferences (like your theme choice). <a href="/privacy/#cookies">Learn more</a></p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-accept" class="btn btn-primary cookie-btn">Accept all</button>
+      <button id="cookie-essentials" class="btn btn-outline-gold cookie-btn">Essentials only</button>
+    </div>
+  </div>
+</div>
 
 <script src="/assets/js/script.js"></script>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
