@@ -20,7 +20,7 @@
   }
 
   /* ── GOOGLE ANALYTICS — only loads after "Accept all" ── */
-  var GA_ID = ''; // Add your GA4 measurement ID here, e.g. 'G-XXXXXXXXXX'
+  var GA_ID = 'G-9J41MN774R';
   var gaLoaded = false;
 
   function loadGA(){
